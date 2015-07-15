@@ -1,0 +1,19 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  '.tree-view .file > .name[data-name$=".js"]': [
+   {label: 'JsHint this file', command: 'jshint-project:run'}
+  ]
+  '.tree-view > .project-root > .header > .name': [
+    {label: 'JsHint this project', command: 'jshint-project:run'}
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'jshint-project'
+      'submenu': [
+        {label: 'JsHint this project', command: 'jshint-project:run'}
+      ]
+    ]
+  }
+]
